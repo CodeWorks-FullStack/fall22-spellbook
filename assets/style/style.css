@@ -3,3 +3,12 @@
 input[type="checkbox"]{
   accent-color: red;
 }
+
+.start-bar{
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.main-content{
+  width: 50vw;
+}
