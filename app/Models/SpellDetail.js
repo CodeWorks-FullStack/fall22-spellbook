@@ -2,12 +2,12 @@ export class SpellDetail {
   constructor(data) {
     this.id = data.id
     this.name = data.name
-    this.description = data.desc.join('</br>')
+    this.description = data.description || data.desc.join('</br>') || 'Unable to decipher'
     this.range = data.range
     this.material = data.material
     this.duration = data.duration
     this.level = data.level
-    this.castingTime = data.casting_time
+    this.castingTime = data.castingTime || data.casting_time
     this.components = data.components
   }
 
@@ -27,12 +27,10 @@ export class SpellDetail {
           </div>
         <div class="card-footer">
           <!--TODO remove button or disable if to many spells-->
-          <button class="btn btn-secondary">Add to Spellbook</button>
+          <button class="btn btn-secondary" onclick="app.sandboxSpellsController.addSpell()">Add to Spellbook</button>
         </div>
       </div>
     `
   }
-
-
 }
 

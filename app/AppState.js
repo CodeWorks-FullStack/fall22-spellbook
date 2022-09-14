@@ -7,9 +7,15 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = loadState('values', Value)
   
+
+  user = prompt('What is your Name?')
+
   
   /** @type {import('./Models/DnDSpell').DnDSpell[]} */
   dndSpells = []
+  
+  /** @type {import('./Models/SandboxSpell').SandboxSpell[]} */
+  sandboxSpells = []
   
   /** @type {import('./Models/SpellDetail').SpellDetail | null} */
   activeSpell = null
