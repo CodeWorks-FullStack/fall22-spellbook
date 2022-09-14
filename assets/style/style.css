@@ -4,7 +4,7 @@ input[type="checkbox"]{
   accent-color: red;
 }
 
-.start-bar{
+.start-bar, .end-bar, .main-content{
   max-height: 100vh;
   overflow: auto;
 }
